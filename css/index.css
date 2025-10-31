@@ -1,0 +1,71 @@
+
+body {
+     background-image: url('../img/fondo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white; 
+}
+
+.header-texto {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+.product-container {
+    display: flex;
+    justify-content: space-around; 
+}
+
+#sesion{
+    float: right; 
+    background-color: rgba(13, 167, 223, 0.6); 
+    margin: 20px; 
+    padding: 15px; 
+    border-radius: 8px; 
+}
+
+#sesion a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 10px;
+
+}
+
+
+.busqueda {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    padding: 20px; /* Espaciado interno */
+    margin: 40px auto; /* Margen para centrar y separar */
+    width: 80%; /* Ancho del contenedor */
+    text-align: center; /* Centrar el texto y el formulario */
+}
+
+
+.busqueda form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.busqueda input, .busqueda select, .busqueda button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: white;
+}
+
+.busqueda button {
+    background-color: #0da7df;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+

@@ -1,0 +1,80 @@
+
+create database tiendajuegos;
+
+use tiendajuegos;
+
+
+CREATE TABLE IF NOT EXISTS categoria (
+    categoria_id INT AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    imagen_url VARCHAR(255),
+    PRIMARY KEY (categoria_id)
+);
+
+-- 3. CREAR TABLA "HIJA" (producto)
+CREATE TABLE IF NOT EXISTS producto (
+    producto_id INT AUTO_INCREMENT,
+    categoria_id INT, 
+    nombre VARCHAR(255), 
+    precio INT,
+    stock INT,
+    plataforma VARCHAR(100), 
+    genero VARCHAR(100),     
+    PRIMARY KEY (producto_id),
+    FOREIGN KEY (categoria_id) REFERENCES categoria(categoria_id)
+);
+
+INSERT INTO categoria (nombre, imagen_url) VALUES 
+('Consolas', 'img/375_375.jpeg'),
+('Ordenadores', 'img/consola.jpg'),
+('Videojuegos', 'img/imagen4.webp');
+
+create table usuario(
+id int AUTO_INCREMENT PRIMARY key,
+nombre varchar(50)not null,
+apellido varchar(50),
+telefono int,
+email varchar(100),
+contraseña varchar(255) not null
+);
+
+
+
+
+INSERT INTO producto (categoria_id, nombre, precio, stock) VALUES
+(1, 'PlayStation 5 Slim', 500, 150),
+(1, 'Xbox Series X', 499, 120),
+(1, 'Nintendo Switch OLED', 350, 200),
+(1, 'Steam Deck', 400, 80),
+(1, 'Xbox Series S', 299, 180),
+(1, 'PlayStation 4 Pro', 399, 50),
+(1, 'ASUS ROG Ally', 700, 60),
+(1, 'PlayStation Portal', 200, 90),
+(1, 'Meta Quest 3', 500, 110),
+(1, 'Nintendo Switch Lite', 200, 250);
+
+
+INSERT INTO producto (categoria_id, nombre, precio, stock) VALUES
+(2, 'MacBook Air M3', 1100, 70),
+(2, 'Dell XPS 15', 1800, 40),
+(2, 'HP Spectre x360', 1400, 55),
+(2, 'Lenovo Legion 5 Pro', 1500, 65),
+(2, 'iMac 24"', 1300, 30),
+(2, 'Acer Predator Helios', 1600, 45),
+(2, 'Microsoft Surface Laptop 5', 1000, 75),
+(2, 'PC Sobremesa "Titan"', 2200, 20),
+(2, 'Lenovo Yoga 7i', 850, 90),
+(2, 'MacBook Pro 14" M3', 1600, 50);
+
+
+INSERT INTO producto (categoria_id, nombre, precio, stock, plataforma, genero) VALUES
+(3, 'Grand Theft Auto VI', 70, 500, 'PS5', 'Acción/Aventura'),
+(3, 'Starfield', 60, 150, 'Xbox Series X', 'RPG'),
+(3, 'The Legend of Zelda: Tears of the Kingdom', 70, 300, 'Switch', 'Aventura'),
+(3, 'Baldur\'s Gate 3', 60, 200, 'PC', 'RPG'),
+(3, 'Cyberpunk 2077', 40, 100, 'PC', 'RPG'),
+(3, 'Hogwarts Legacy', 65, 180, 'PS5', 'Aventura/RPG'),
+(3, 'Call of Duty: Modern Warfare III', 70, 250, 'Xbox Series X', 'Shooter'),
+(3, 'Super Mario Bros. Wonder', 60, 220, 'Switch', 'Plataformas'),
+(3, 'Diablo IV', 55, 130, 'PC', 'ARPG'),
+(3, 'Final Fantasy VII Rebirth', 70, 170, 'PS5', 'RPG');

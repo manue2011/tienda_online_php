@@ -1,0 +1,59 @@
+body {
+    background-image: url('../img/iniciar.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1em;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+}
+
+
+
+/* Estilo común para el botón del formulario y el enlace de volver */
+form button, a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0da7df;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1em;
+    text-align: center; /* Asegura que el texto del enlace esté centrado */
+    width: 350px; /* Ancho igual al del formulario para consistencia */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}

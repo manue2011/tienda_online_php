@@ -1,0 +1,83 @@
+body {
+    background-image: url('../img/tienda.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 2em;
+}
+
+.page-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-container h1, .page-container h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+}
+
+.category-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    border: 2px solid #555;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.product-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #555;
+    padding: 1.5em;
+    border-radius: 8px;
+    width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product-box h3 {
+    margin-top: 0;
+    color: #0da7df; /* Un color azul para destacar el nombre */
+}
+
+.product-box p {
+    margin: 0.5em 0;
+    color: #ddd;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2em;
+    padding: 10px 25px;
+    background-color: rgba(13, 167, 223, 0.6);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(13, 167, 223, 0.9);
+}
