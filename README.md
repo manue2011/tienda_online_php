@@ -41,6 +41,3 @@ Para probar este proyecto en local:
 
 ---
 
-## 📸 Capturas de Pantalla
-
-*(Aquí puedes subir tus propias imágenes del login o el buscador)*
